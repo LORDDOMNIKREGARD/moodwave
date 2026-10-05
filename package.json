@@ -1,0 +1,29 @@
+{
+  "name": "moodwave",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Playlists tuned by mood, genre and beat, from your Spotify, Apple Music and YouTube listening.",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "vite",
+    "build": "vite build",
+    "test": "node --test \"test/*.test.mjs\"",
+    "build-catalog": "node scripts/build-catalog.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "^5.3.0",
+    "@fontsource-variable/geist-mono": "^5.3.0",
+    "@gsap/react": "^2.1.2",
+    "@hugeicons/core-free-icons": "^4.3.5",
+    "@hugeicons/react": "^1.1.10",
+    "gsap": "^3.15.0",
+    "motion": "^13.5.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.2"
+  }
+}

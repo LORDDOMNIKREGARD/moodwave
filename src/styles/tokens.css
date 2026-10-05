@@ -1,0 +1,79 @@
+/*
+ * Moodwave design tokens, taken from the "Taste Skill" design system.
+ *
+ *   ground / ink / muted   page, text, secondary text. Never pure black or white as a page colour.
+ *   sand / sand-soft       tint fields for cards and large blocks. Never text, never hairlines.
+ *   one accent             terracotta, saturation under 80%, used sparingly and never as a glow.
+ *   corner rule            pill = anything you press; 16px = containers; 8px = inputs and artwork.
+ *   motion                 transform and opacity only, 0.3s cubic-bezier(0.16, 1, 0.3, 1).
+ *
+ * Dark mode follows prefers-color-scheme. One theme per page.
+ */
+
+:root {
+  color-scheme: light dark;
+
+  --font-sans: 'Geist Variable', 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono Variable', 'Geist Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Taste Skill, light */
+  --ground: #f5f3ef;
+  --ink: #1f1f1f;
+  --muted: #5c5a59;
+  --sand: #ebe0d4;
+  --sand-soft: #efe8df;
+  --cta-fill: #0a0a0a;
+  --cta-ink: #ffffff;
+
+  /* derived from the tokens above */
+  --surface: var(--sand-soft);
+  --surface-2: var(--sand);
+  --field: #faf8f4;
+  --hairline: rgb(31 31 31 / 0.1);
+  --hairline-strong: rgb(31 31 31 / 0.3);
+  --accent: #b4472b;
+  --accent-ink: #ffffff;
+  --accent-soft: rgb(180 71 43 / 0.12);
+  --good: #2f7a52;
+  --bad: #b4332b;
+  --shadow: 0 28px 64px -28px rgb(74 48 30 / 0.38);
+
+  --radius-card: 16px;
+  --radius-field: 8px;
+  --radius-pill: 9999px;
+
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-16: 64px;
+  --space-24: 96px;
+  --container: 1400px;
+  --gutter: clamp(16px, 4vw, 48px);
+  --nav-height: 72px;
+  --measure: 65ch;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --ground: #0e1011;
+    --ink: #edede3;
+    --muted: #9d9898;
+    --surface: #14181a;
+    --surface-2: #1b2023;
+    --field: #0e1011;
+    --cta-fill: #edede3;
+    --cta-ink: #0e1011;
+    --hairline: rgb(237 237 227 / 0.09);
+    --hairline-strong: rgb(237 237 227 / 0.28);
+    --accent: #e4775a;
+    --accent-ink: #1a0f0b;
+    --accent-soft: rgb(228 119 90 / 0.14);
+    --good: #6fc59a;
+    --bad: #ee8c82;
+    --shadow: 0 28px 64px -28px rgb(0 0 0 / 0.7);
+  }
+}
